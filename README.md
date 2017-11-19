@@ -3,12 +3,6 @@
 Java wrapper for [DataScript](https://github.com/tonsky/datascript)
 
 ## Usage
-
-[Leiningen](https://github.com/technomancy/leiningen) dependency information:
-
-```clojure
-[defng/jdatascript "0.1.0"]
-```
     
 [Maven](http://maven.apache.org/) dependency information:
 ```xml
