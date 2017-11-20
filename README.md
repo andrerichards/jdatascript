@@ -11,9 +11,14 @@ Java wrapper for [DataScript](https://github.com/tonsky/datascript)
       <artifactId>jdatascript</artifactId>
       <version>0.1.0</version>
     </dependency>
+    
+    <repository>
+      <id>clojars.org</id>
+      <url>http://clojars.org/repo</url>
+    </repository>
 ```
 
-For example code, see the tests.
+For example code, see the [tests](https://github.com/andrerichards/jdatascript/blob/master/test/defng/jdatascript/JDataScriptTest.java).
 
 ## Rationale
 [DataScript](https://github.com/tonsky/datascript) has good support for JavaScript, and is usually 'advertised' as useful for 'client-side applications that need to track a lot of state', e.g. as the single store in the 'redux model'.
@@ -45,7 +50,7 @@ Things that make it 'a bit more Java':
 * tx(Operation operation, Object entityID, String key, Object value) : convenience method to create a transaction 
 
 
-For example code, see the tests.
+For example code, see the [tests](https://github.com/andrerichards/jdatascript/blob/master/test/defng/jdatascript/JDataScriptTest.java).
 
 ## License
 
