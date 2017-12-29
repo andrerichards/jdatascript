@@ -1,6 +1,7 @@
 (ns defng.jdatascript.core
   (:require [clojure.walk :as walk]
             [datascript.core :as d]
+            [datascript.db :as db]
             [defng.joculer.core :as joculer]))
 
 ;; Conversions
