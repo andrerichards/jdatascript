@@ -37,6 +37,7 @@ public class JDataScript {
     static IFn TRANSACT = Clojure.var(NAMESPACE, "transact");
     static IFn Q = Clojure.var("datascript.core", "q");
     static IFn PULL = Clojure.var("datascript.core", "pull");
+    static IFn PULL_MANY = Clojure.var("datascript.core", "pullMany");
     static IFn PULL_RESULT_TO_JAVA = Clojure.var(NAMESPACE, "pull-result->java");
 
 
@@ -47,7 +48,7 @@ public class JDataScript {
     public static DB emptyDB(Map schema) {
         return (DB) EMPTY_DB.invoke(SCHEMA_TO_CLJ.invoke(schema));
     }
-
+    
     public static Atom createConn() {
         return (Atom) CREATE_CONN.invoke();
     }
@@ -66,6 +67,10 @@ public class JDataScript {
 
     public static DB dbWith(DB db, List txData) {
         return (DB) DB_WITH.invoke(db, txData);
+    }
+
+    public static TxReport transact(Atom conn, Map txData) {
+        return (TxReport) TRANSACT.invoke(conn, Joculer.toClojure(listOf(txData)));
     }
 
     public static TxReport transact(Atom conn, List txData) {
@@ -129,6 +134,10 @@ public class JDataScript {
         return (Map) PULL_RESULT_TO_JAVA.invoke(PULL.invoke(db, Clojure.read(pattern), entityId));
     }
 
+    public static Map pullMany(DB db, String pattern, List entityIds) {
+        return (Map) PULL_RESULT_TO_JAVA.invoke(PULL_MANY.invoke(db, Clojure.read(pattern), entityIds));
+    }
+
     public enum Operation {
         ADD(":db/add"),
         RETRACT(":db/retract");
@@ -146,6 +155,10 @@ public class JDataScript {
         public String toString() {
             return value;
         }
+    }
+
+    public static List tx(Object entityID, String key, Object value) {
+        return listOf(Operation.ADD, entityID, key, value);
     }
 
     public static List tx(Operation operation, Object entityID, String key, Object value) {
