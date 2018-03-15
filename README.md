@@ -44,6 +44,7 @@ The full DataScript API is not yet supported, but the following is provided:
 * transact(Atom conn, List txData)
 * q(Object query, java.lang.Object... inputs)
 * pull(DB db, String pattern, Object entityId)
+* pullMany(DB db, String pattern, List entityIds)
 
 Things that make it 'a bit more Java':
 * enum: Operation.ADD, Operation.RETRACT
