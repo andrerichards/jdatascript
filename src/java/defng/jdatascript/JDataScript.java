@@ -37,7 +37,7 @@ public class JDataScript {
     static IFn TRANSACT = Clojure.var(NAMESPACE, "transact");
     static IFn Q = Clojure.var("datascript.core", "q");
     static IFn PULL = Clojure.var("datascript.core", "pull");
-    static IFn PULL_MANY = Clojure.var("datascript.core", "pullMany");
+    static IFn PULL_MANY = Clojure.var("datascript.core", "pull-many");
     static IFn PULL_RESULT_TO_JAVA = Clojure.var(NAMESPACE, "pull-result->java");
 
 
