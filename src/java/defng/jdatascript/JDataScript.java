@@ -134,8 +134,8 @@ public class JDataScript {
         return (Map) PULL_RESULT_TO_JAVA.invoke(PULL.invoke(db, Clojure.read(pattern), entityId));
     }
 
-    public static Map pullMany(DB db, String pattern, List entityIds) {
-        return (Map) PULL_RESULT_TO_JAVA.invoke(PULL_MANY.invoke(db, Clojure.read(pattern), entityIds));
+    public static List<Map> pullMany(DB db, String pattern, List entityIds) {
+        return (List) PULL_RESULT_TO_JAVA.invoke(PULL_MANY.invoke(db, Clojure.read(pattern), entityIds));
     }
 
     public enum Operation {

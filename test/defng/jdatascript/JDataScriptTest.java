@@ -131,6 +131,16 @@ public class JDataScriptTest {
         }
 
         {
+            List<Map> actual = pullMany(db, "[\"children\"]", listOf(1, 10));
+            List expected = listOf(
+                    mapOf("children", listOf(mapOf(":db/id", 10))),
+                    mapOf("children", listOf(
+                            mapOf(":db/id", 100),
+                            mapOf(":db/id", 101))));
+            assertTrue(diff(expected, actual), Joculer.eq(expected, actual));
+        }
+
+        {
             Map actual = pull(db, "[\"children\", {\"father\" [\"name\" :db/id]}]", 10);
             Map expected =
                     mapOf(
