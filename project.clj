@@ -1,4 +1,4 @@
-(defproject defng/jdatascript "0.5.1"
+(defproject defng/jdatascript "0.5.2"
   :description "Java wrapper for DataScript."
   :url "https://github.com/andrerichards/jdatascript"
   :license {:name "Eclipse Public License"

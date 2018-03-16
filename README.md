@@ -9,7 +9,7 @@ Java wrapper for [DataScript](https://github.com/tonsky/datascript)
     <dependency>
       <groupId>defng</groupId>
       <artifactId>jdatascript</artifactId>
-      <version>0.5.1</version>
+      <version>0.5.2</version>
     </dependency>
     
     <repository>

@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
-## [0.5.1] - 2018-03-15
+## [0.5.2] - 2018-03-15
 ### Added
 - pullMany : fixed return signature to be List<Map>
 
@@ -17,6 +17,6 @@ All notable changes to this project will be documented in this file. This change
 - Initial JDataScript class and tests.
 
 [Unreleased]: https://github.com/andrerichards/jdatascript/compare/0.1.0...HEAD
-[0.5.1]: https://github.com/andrerichards/jdatascript/compare/0.4.0...0.5.1
+[0.5.2]: https://github.com/andrerichards/jdatascript/compare/0.4.0...0.5.2
 [0.4.0]: https://github.com/andrerichards/jdatascript/compare/0.1.0...0.4.0
 [0.1.0]: https://github.com/andrerichards/jdatascript/compare/0.1.0...0.1.0
